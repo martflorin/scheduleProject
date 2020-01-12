@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,21 @@
 <header>
         <div class="w3-container w3-center">
             <h1>Timetable</h1>
+            <?php
+            if(isset($_SESSION['isLogged'])){
+            if($_SESSION['isLogged']=="true"){ ?>
+            <form action="api/logout.inc.php" method="POST">
+            <input type="submit" value="logout">
+            </form>
+            <?php
+            }
+        }else {
+            ?>
+        <a href="login.php">Login</a>
+            <?php
+        }
+            ?>
+
         </div>
         <hr style="width:100%; border:1px solid #202F55">
 </header>
