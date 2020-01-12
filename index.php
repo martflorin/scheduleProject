@@ -6,10 +6,13 @@
 ?>
 
 <?php require "header.php";
-if($_SESSION['isAdmin']=="true"){
-    require "admin.php";
+
+if(isset($_SESSION['isAdmin'])){
+    if($_SESSION['isAdmin']=="true"){
+        require "admin.php";
 }else{
     require "user.php";
+}
 }
 ?>
 
