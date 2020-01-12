@@ -4,13 +4,6 @@ if(!isset($_POST['login-submit'])){
     header("Location:../login.php");
 }
 
-if($username=="admin" && $password=="admin"){
-    session_start();
-    $_SESSION['isLogged']="true";
-    $_SESSION['isAdmin']="true";
-    header("Location: ../index.php");
-}
-
 require "db.inc.php";
 
 $username = $_POST['uname'];
@@ -26,6 +19,11 @@ if($num_rows != 0){
     if($username == $databaseusername && $password == $databasepassword){
         session_start();
         $_SESSION['isLogged']="true";
+        if($username=="admin" && $password=="admin"){
+            $_SESSION['isAdmin']="true";
+        }else{
+            $_SESSION['isAdmin']="false";
+        }     
         header("Location: ../index.php");
     }
 }
