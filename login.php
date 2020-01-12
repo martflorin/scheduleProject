@@ -1,14 +1,4 @@
-
-<?php require "header.php";
-session_start();
-if(isset($_SESSION['isLogged'])){
-    header("location:index.php");
-}
-
-
-
-?>
-
+<?php require "header.php"; ?>
 <form action="api/login.inc.php" method="post">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
