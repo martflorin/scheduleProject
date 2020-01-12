@@ -2,23 +2,23 @@
         <h2>Adauga sali</h2>
         <form action="/api/add.inc.php" class="w3-light-green" method="POST">
             <label for="sala">Numar sali</label>
-            <input type="sala" name="sala" id="sala">
+            <input type="number" name="sala" id="sala">
             <label for="zile">Zile</label>
             <div class="multiselect">
-            <input type="checkbox" name="days[]" value="luni" >luni
-            <input type="checkbox" name="days[]" value="marti" >marti
-            <input type="checkbox" name="days[]" value="miercuri" >miercuri
-            <input type="checkbox" name="days[]" value="joi" >joi
-            <input type="checkbox" name="days[]" value="vineri" >vineri
-</div>
+                <input type="checkbox" name="days[]" value="luni" >luni
+                <input type="checkbox" name="days[]" value="marti" >marti
+                <input type="checkbox" name="days[]" value="miercuri" >miercuri
+                <input type="checkbox" name="days[]" value="joi" >joi
+                <input type="checkbox" name="days[]" value="vineri" >vineri
+            </div>
             <label for="interval">Interval orar</label>
             <div class="multiselect">
-                <button>08:00-10:00</button>
-                <button>10:00-12:00</button>
-                <button>12:00-14:00</button>
-                <button>14:00-16:00</button>
-                <button>16:00-18:00</button>
-                <button>18:00-20:00</button>
+            <input type="checkbox" name="interval[]" value="08:00-10:00" >08:00-10:00
+            <input type="checkbox" name="interval[]" value="10:00-12:00" >10:00-12:00
+            <input type="checkbox" name="interval[]" value="12:00-14:00" >12:00-14:00
+            <input type="checkbox" name="interval[]" value="14:00-16:00" >14:00-16:00
+            <input type="checkbox" name="interval[]" value="16:00-18:00" >16:00-18:00
+            <input type="checkbox" name="interval[]" value="18:00-20:00" >18:00-20:00
             </div>
             <button type="submit" value="adaugaSali" name="adaugaSali">Adauga</button>
         </form>
