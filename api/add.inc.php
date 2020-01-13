@@ -52,11 +52,26 @@ if(isset($_POST['adaugaSali'])){
 
 
 if(isset($_POST['adaugaProfesor'])){
-    $numeProfesor=$username=$_POST['numeProfesor'];
-    $prenumeProfesor=$password=$_POST['prenumeProfesor'];
+    if(empty($_POST['numeProfesor']) or empty($_POST['prenumeProfesor']) or empty($_POST['materiePredata']) or empty($_POST['numarCursuri']) or empty($_POST['numarSeminarii']))
+    {
+        header("location: ../index.php?emptyfields");
+        exit();
+    }
+    $numeProfesor=$_POST['numeProfesor'];
+    $prenumeProfesor=$_POST['prenumeProfesor'];
     $materiePredata=$_POST['materiePredata'];
     $nrCursuri=$_POST['numarCursuri'];
     $nrSeminarii=$_POST['numarSeminarii'];
+    require "db.inc.php";
+    $sql = "INSERT INTO utilizatori(nume,prenume,username,parola,materie_predata,nr_seminarii,nr_cursuri)
+    VALUES ('$numeProfesor', '$prenumeProfesor', '$numeProfesor','$prenumeProfesor','$materiePredata','$nrCursuri',$nrSeminarii)";
+    if ($con->query($sql) === TRUE) {
+        header("location: ../index.php?succes");
+    } else {
+        header("location: ../index.php?failure");
+    }
+    $con->close();
+    exit();
 }
 
 
