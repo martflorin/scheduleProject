@@ -22,6 +22,7 @@
             </div>
             <button type="submit" value="adaugaSali" name="adaugaSali">Adauga</button>
         </form>
+        <hr style="width:100%; border:1px solid #202F55">
         <h2>Adauga profesor</h2>
         <form action="/api/add.inc.php" class="w3-light-green" method="POST">
             <label for="numeProfesor">Nume</label>
@@ -40,6 +41,15 @@
             
             <button type="submit" value="adaugaProfesor" name="adaugaProfesor">Adauga</button>
         </form>
+    </div>
+    <hr style="width:100%; border:1px solid #202F55">
+    <div>
+    <?php require "/api/exportCSV.php"; ?>
+    <form action="/api/generate.inc.php" class="w3-light-green" method="POST">
+    <button type="submit" value="generate" name="generate">Generate</button>
+    <button type="submit" value="export" name="export">Export</button>
+    </form>
+    
     </div>
 
     <!-- Scripts-->
