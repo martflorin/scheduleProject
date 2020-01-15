@@ -29,6 +29,17 @@ form button {
     margin: 0 auto;
 }
 
+#export{
+	text-align: center;
+	width: 34%;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	text-decoration: none !important;
+	padding: 3px;
+}
+
 .multiselect {
     margin-bottom: 10px;
 }

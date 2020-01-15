@@ -47,7 +47,7 @@
     <?php require "api/exportCSV.php"; ?>
     <form action="/api/generate.inc.php" class="w3-light-green" method="POST">
     <button type="submit" value="generate" name="generate">Generate</button>
-    <?php echo '<a href="'.$resp.'" download="comm.csv" type="submit" value="export" name="export">Export</a>'; ?>
+    <?php echo '<a href="'.$resp.'" download="comm.csv" id= "export" type="submit" value="export" name="export">Export</a>'; ?>
     </form>
     
     </div>
