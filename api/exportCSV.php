@@ -10,6 +10,4 @@ while($data = $sql->fetch_assoc())
 $resp = "data:text/csv;charset=utf-8, ID, ID_PROF, SALA, ZI, INTERVAL, COMENTARIU\n";
 $resp .= $commData;
 
-echo '<a href="'.$resp.'" download="comm.csv">Download</a>';
-
 ?>

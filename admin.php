@@ -44,10 +44,10 @@
     </div>
     <hr style="width:100%; border:1px solid #202F55">
     <div>
-    <?php require "/api/exportCSV.php"; ?>
+    <?php require "api/exportCSV.php"; ?>
     <form action="/api/generate.inc.php" class="w3-light-green" method="POST">
     <button type="submit" value="generate" name="generate">Generate</button>
-    <button type="submit" value="export" name="export">Export</button>
+    <?php echo '<a href="'.$resp.'" download="comm.csv" type="submit" value="export" name="export">Export</a>'; ?>
     </form>
     
     </div>
